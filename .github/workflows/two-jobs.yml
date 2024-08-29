@@ -3,21 +3,21 @@ name: two jobs
 on: push
 
 jobs:
-        job01:
-                name: Job 01
+        JobLinux:
+                name: Job Linux
                 runs-on: ubuntu-latest
                 steps:
                         - name: Etapa 01
-                          uses: actions/checkout@v3
+                          uses: actions/checkout@v4
                         - name: Etapa 02
                           run: |
                                   echo "$(cat README.md)"
                                   uname -a
-        job02:
-                name: Job 02
+        JobWindows:
+                name: Job Windows
                 runs-on: windows-latest
                 steps:
                         - name: Etapa 01
-                          uses: actions/checkout@v3
+                          uses: actions/checkout@v4
                         - name: Etapa 02
                           run: "Get-CimInstance Win32_OperatingSystem"
